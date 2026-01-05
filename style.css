@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(to right, #FFD1C1, #BEE7E8);
+  height: 100vh;
+  overflow: hidden;
+  color: #2c2c2c;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  padding: 60px;
+}
+
+.text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-section h1 {
+  font-size: 42px;
+}
+
+.jarvis {
+  font-family: 'Orbitron', sans-serif;
+  color: #1c7ed6;
+  margin-top: 10px;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%,100% {opacity:1;}
+  50% {opacity:0.5;}
+}
+
+.btn {
+  width: fit-content;
+  padding: 12px 28px;
+  background: #6EC1E4;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Iron Man Reactor */
+
+.ironman {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.arc {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 8px solid #6EC1E4;
+  box-shadow: 0 0 40px #6EC1E4;
+  animation: spin 6s linear infinite;
+}
+
+.glow {
+  width: 90px;
+  height: 90px;
+  background: #6EC1E4;
+  border-radius: 50%;
+  margin-top: -135px;
+  box-shadow: 0 0 40px #6EC1E4;
+}
+
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.ironman p {
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 30px;
+}
+
+/* Floating Hearts */
+.hearts::before,
+.hearts::after {
+  content: "💙";
+  position: fixed;
+  top: -10%;
+  left: 40%;
+  font-size: 22px;
+  animation: float 12s linear infinite;
+}
+
+@keyframes float {
+  to {transform: translateY(120vh);}
+}
